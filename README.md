@@ -25,9 +25,9 @@ To create a simple thirukkural generator using HTML, CSS, and JavaScript that di
     <li>Rounded borders</li>
     <li>Soft shadow</li>
     <li>Add hover effects for the button.</li>
-  </li>
   </ul>
-  </ul
+  </li>
+</ul>
 
 #### 3. Add JavaScript Functionality:
 <ul>
