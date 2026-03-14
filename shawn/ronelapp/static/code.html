@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Thirukkural Generator</title>
+
+<style>
+
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+align-items:center;
+    height:100vh;
+    background:#f2f2f2;
+    font-family:Arial;
+}
+
+.container{
+    text-align:center;
+}
+
+.box{
+    padding:20px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    width:350px;
+    margin-bottom:20px;
+}
+
+button{
+    padding:10px 20px;
+    background:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2e7d32;
+}
+
+footer{
+    position:absolute;
+    bottom:10px;
+    left:15px;
+    right:15px;
+    background:rgb(11, 11, 23);
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    border-radius:20px
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Thirukkural Generator</h2>
+
+<div class="box">
+<p id="number">Kural Number:</p>
+<p id="kural">Click the button to get a Thirukkural</p>
+<p id="meaning"></p>
+</div>
+
+<button onclick="generateKural()">Get Thirukkural</button>
+
+</div>
+
+<footer>
+<p>Name: G Shawn Ronel</p>
+<p>Register Number: 25005544</p>
+</footer>
+
+<script>
+
+const kurals = [
+
+{
+number:1,
+kural:"அகர முதல எழுத்தெல்லாம் ஆதி பகவன் முதற்றே உலகு",
+meaning:"As the letter 'A' is the first of all letters, so God is first in the world."
+},
+
+{
+number:2,
+kural:"கற்றதனால் ஆய பயனென்கொல் வாலறிவன் நற்றாள் தொழாஅர் எனின்",
+meaning:"Learning has no use if one does not respect wisdom."
+},
+
+{
+number:3,
+kural:"மலர்மிசை ஏகினான் மாணடி சேர்ந்தார் நிலமிசை நீடுவாழ் வார்",
+meaning:"Those who reach the feet of the divine will live long and prosper."
+},
+
+{
+number:4,
+kural:"வேண்டுதல் வேண்டாமை இலானடி சேர்ந்தார்க்கு யாண்டும் இடும்பை இல",
+meaning:"Those who surrender to God will not suffer in life."
+}
+
+];
+
+function generateKural(){
+
+let randomIndex = Math.floor(Math.random()*kurals.length);
+
+let selected = kurals[randomIndex];
+
+document.getElementById("number").innerText="Kural Number: "+selected.number;
+
+document.getElementById("kural").innerText=selected.kural;
+
+document.getElementById("meaning").innerText=selected.meaning;
+
+}
+
+</script>
+
+</body>
+</html>
